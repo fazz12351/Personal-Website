@@ -18,6 +18,7 @@ app.get("/WeatherAPI",function(req,res){
     
 })
 
+app.set("view engine", "ejs");
 
 app.post("/WeatherAPI", function (req, res) {
 
@@ -45,13 +46,18 @@ app.post("/WeatherAPI", function (req, res) {
 
 })
 
+app.get("/Todolist",function(req,res){
+    res.render("list",{
+        Day:"Faeem",
+        Date:"Faeem"
 
-
-app.get("/projects"+"/WeatherApp",function(req,res){
-   console.log("we are up and running")
-    
-    
+    })
 })
+
+
+
+
+
 
 app.listen(3000,function(){
     console.log("we are running")
